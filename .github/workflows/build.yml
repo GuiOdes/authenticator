@@ -15,6 +15,15 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: 'A pipeline precisa de sua aprovação. Aprove ou rejeite na seção "Actions" do GitHub.'
+      - name: Esperando aprovação manual
+        uses: hmarr/auto-approve-action@v2.1.0
+        with:
+          github-token: ${{ secrets.GHUB_TOKEN }}
+      - name: Aguardando aprovação
+        run: |
+          echo "Aguardando sua aprovação. Vá para 'Actions' no GitHub e aprove esta execução para continuar."
+          echo "name=manual-approval::true" >> $GITHUB_ENV
+
 
   build-and-push:
     runs-on: ubuntu-latest
