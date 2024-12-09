@@ -12,13 +12,11 @@ COPY src ./src
 # Permissão de execução para o script gradlew
 RUN chmod +x ./gradlew
 
-RUN chown -R gradle:gradle /app
-
 # Realiza o build da aplicação
 RUN ./gradlew clean build -x test -x detekt
 
 # Etapa 2: Criação da imagem final
-FROM eclipse-temurin:21
+FROM eclipse-temurin:21-jdk
 
 # Define o diretório de trabalho
 WORKDIR /app
