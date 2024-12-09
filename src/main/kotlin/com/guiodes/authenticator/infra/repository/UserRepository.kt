@@ -1,5 +1,6 @@
 package com.guiodes.authenticator.infra.repository
 
+import com.guiodes.authenticator.application.gateway.UserGateway
 import com.guiodes.authenticator.domain.model.User
 import com.guiodes.authenticator.infra.api.request.CreateUserRequest
 import com.guiodes.authenticator.infra.repository.expression.UserExpressions
@@ -16,9 +17,9 @@ import java.util.UUID
 @Repository
 class UserRepository(
     private val template: NamedParameterJdbcTemplate
-) {
+) : UserGateway {
 
-    fun save(request: CreateUserRequest) {
+    override fun save(request: CreateUserRequest) {
         val id = UUID.randomUUID()
         val now = LocalDateTime.now()
 
