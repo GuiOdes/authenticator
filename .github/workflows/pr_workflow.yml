@@ -20,6 +20,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
       - name: Run Lint
         run: ./gradlew lint
 
@@ -38,6 +41,9 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
       - name: Run Unit Tests
         run: ./gradlew test --tests '*Test'
 
@@ -55,6 +61,9 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
 
       - name: Run Integration Tests
         run: ./gradlew test --tests '*IT'
