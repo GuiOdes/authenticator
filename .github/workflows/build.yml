@@ -21,7 +21,7 @@ jobs:
           github-token: ${{ secrets.GHUB_TOKEN }}
       - name: Aguardando aprovação
         run: |
-          echo "Aguardando sua aprovação. Vá para 'Actions' no GitHub e aprove esta execução para continuar."
+          echo "Aguardando sua aprovação. Vá para a aba 'Actions' no GitHub e aprove esta execução para continuar."
           echo "name=manual-approval::true" >> $GITHUB_ENV
 
 
