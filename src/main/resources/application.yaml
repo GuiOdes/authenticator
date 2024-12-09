@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: Guiodes-Authenticator
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authenticator
+    username: root
+    password: root
