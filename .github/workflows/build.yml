@@ -18,7 +18,7 @@ jobs:
       - uses: trstringer/manual-approval@v1
         with:
           secret: ${{ secrets.GHUB_TOKEN }}
-          approvers: guiodes
+          approvers: GuiOdes
           minimum-approvals: 1
           issue-title: "Requisição de aprovação de deploy"
           issue-body: "A pipeline precisa de sua aprovação. Aprove ou rejeite digitando /lgtm ou /approve ou /reject na seção 'Actions' do GitHub."
