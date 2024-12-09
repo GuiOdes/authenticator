@@ -1,5 +1,5 @@
 # Etapa 1: Build da aplicação
-FROM gradle:8.3-jdk17 AS builder
+FROM gradle:8.11.1-jdk21 AS builder
 
 # Define o diretório de trabalho
 WORKDIR /app
