@@ -6,7 +6,7 @@ import org.springframework.boot.test.util.TestPropertyValues
 import org.springframework.context.ConfigurableApplicationContext
 import org.testcontainers.containers.PostgreSQLContainer
 
-class CustomPostgresContainer: PostgreSQLContainer<CustomPostgresContainer>("postgres:latest"),
+class CustomPostgresContainer : PostgreSQLContainer<CustomPostgresContainer>("postgres:latest"),
     IntegrationTestsConfiguration {
 
     init {

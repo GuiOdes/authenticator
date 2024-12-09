@@ -66,17 +66,17 @@ kotlin {
 
 detekt {
 	toolVersion = "1.23.7"
-
 	config.setFrom("config/detekt.yml")
-
-	autoCorrect = true
 }
 
 tasks.withType<Detekt>().configureEach {
 	reports {
-		html.required.set(true)
-		html.outputLocation.set(file("build/reports/detekt.html"))
+		xml.required.set(false)
+		html.required.set(false)
+		txt.required.set(false)
+		sarif.required.set(false)
 	}
+	autoCorrect = true
 }
 
 tasks.withType<Test> {

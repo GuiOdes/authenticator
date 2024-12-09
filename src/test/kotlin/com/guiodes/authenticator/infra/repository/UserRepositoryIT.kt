@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 
 class UserRepositoryIT(
     @Autowired private val userRepository: UserRepository
-): IntegrationTests() {
+) : IntegrationTests() {
 
     @Test
     fun `Should create a user`() {

@@ -1,4 +1,4 @@
-package com.guiodes.authenticator.infra.repository
+package com.guiodes.authenticator.infra.repository.utils
 
 fun String.addCondition(sql: String): String {
     val lowerCaseQueryString = this.lowercase()

@@ -5,6 +5,7 @@ import com.guiodes.authenticator.infra.api.request.CreateUserRequest
 import com.guiodes.authenticator.infra.repository.expression.UserExpressions
 import com.guiodes.authenticator.infra.repository.expression.UserExpressions.SELECT
 import com.guiodes.authenticator.infra.repository.expression.UserExpressions.USERNAME
+import com.guiodes.authenticator.infra.repository.utils.addCondition
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.stereotype.Repository
