@@ -12,6 +12,8 @@ COPY src ./src
 # Permissão de execução para o script gradlew
 RUN chmod +x ./gradlew
 
+RUN chown -R gradle:gradle /app
+
 # Realiza o build da aplicação
 RUN ./gradlew clean build -x test -x detekt
 
