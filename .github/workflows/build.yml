@@ -14,7 +14,7 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: 'A pipeline precisa de sua aprovação. Aprove ou rejeite na seção "Actions" do GitHub.'
+          message: 'A pipeline precisa de sua aprovação. Aprove ou rejeite na seção nesse link: https://github.com/GuiOdes/authenticator/issues'
       - uses: trstringer/manual-approval@v1
         with:
           secret: ${{ secrets.GHUB_TOKEN }}
