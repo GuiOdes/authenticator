@@ -6,14 +6,12 @@ object UserExpressions {
         INSERT INTO TB_USER (
             ID,
             USERNAME,
-            PASSWORD,
             EMAIL,
             CREATED_AT,
             UPDATED_AT
         ) VALUES (
             :id,
             :username,
-            :password,
             :email,
             :createdAt,
             :updatedAt
@@ -24,19 +22,10 @@ object UserExpressions {
         SELECT
             ID,
             USERNAME,
-            PASSWORD,
             EMAIL,
             CREATED_AT,
             UPDATED_AT
         FROM TB_USER
-    """
-
-    const val UPDATE_PASSWORD = """
-        UPDATE TB_USER
-        SET
-            PASSWORD = :password,
-            UPDATED_AT = :updatedAt
-        WHERE ID = :id
     """
 
     const val USERNAME = "username = :username"

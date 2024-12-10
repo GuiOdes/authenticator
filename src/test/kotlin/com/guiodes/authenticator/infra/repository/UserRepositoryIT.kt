@@ -12,7 +12,7 @@ class UserRepositoryIT(
 
     @Test
     fun `Should create a user`() {
-        val request = UserFixture.createRequest()
+        val request = UserFixture.createModel()
 
         assertThat(userRepository.findByUsername(request.username)).isNull()
 
@@ -21,7 +21,6 @@ class UserRepositoryIT(
         userRepository.findByUsername(request.username).also {
             assertThat(it).isNotNull
             assertThat(it!!.username).isEqualTo(request.username)
-            assertThat(it.password).isEqualTo(request.password)
             assertThat(it.email).isEqualTo(request.email)
         }
     }
