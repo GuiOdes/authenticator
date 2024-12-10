@@ -1,7 +1,7 @@
 package com.guiodes.authenticator.application.gateway
 
-import com.guiodes.authenticator.infra.api.request.CreateUserRequest
+import com.guiodes.authenticator.domain.model.User
 
 interface UserGateway {
-    fun save(request: CreateUserRequest)
+    fun save(user: User)
 }
